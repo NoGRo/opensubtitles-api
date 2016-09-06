@@ -19,10 +19,11 @@ var OpenSubtitles = new OS({
     endpoint: 'https://api.opensubtitles.org:443/xml-rpc'
 });
 OpenSubtitles.search({
-    season: s,
-    episode: ep,
-    imdbid: imdb,
-    limit: 'all'
+    episode: "4",
+    filename: "Orphan.Black.S03E04.720p.HDTV.x264-KILLERS[rartv]",
+    imdbid: "tt2234222",
+    season: "3",
+    sublanguageid: 'spa'
 })
 .then(function (subtitles) {
     ms1 = Date.now() - start;
@@ -36,10 +37,11 @@ OpenSubtitles.search({
         endpoint: 'http://api.opensubtitles.org:80/xml-rpc'
     }); 
     return OpenSubtitles.search({
-        season: s,
-        episode: ep,
-        imdbid: imdb,
-        limit: 'all'
+        episode: "4",
+        filename: "Orphan.Black.S03E04.720p.HDTV.x264-KILLERS[rartv]",
+        imdbid: "tt2234222",
+        season: "3",
+        sublanguageid: 'spa'
     });
 })
 .then(function (subtitles) {
